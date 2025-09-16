@@ -1,6 +1,7 @@
 // Example games
 const GAMES = [
   {
+    id: 'flipoint',
     title: 'Flipoint',
     short: 'A reflective puzzler.',
     description: `Throw Orbs to reflect crates onto boxes`,
