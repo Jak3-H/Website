@@ -8,9 +8,9 @@ const GAMES = [
     tags: ['Puzzle','Jam Game'],
     itch: 'https://thereal-phoenix.itch.io/flipoint',
     screenshots: [
-      'images/flipoint1.png',
-      'images/flipoint2.png',
-      'images/flipoint3.png',
+      'screenshots/flipoint1.png',
+      'screenshots/flipoint2.png',
+      'screenshots/flipoint3.png',
     ]
   },
   {
@@ -21,9 +21,9 @@ const GAMES = [
     tags: ['Shooter','Rogue-like','Jam Game'],
     itch: 'https://thereal-phoenix.itch.io/best-before',
     screenshots: [
-      'images/bestbefore1.png',
-      'images/bestbefore2.png',
-      'images/bestbefore3.png',
+      'screenshots/bestbefore1.png',
+      'screenshots/bestbefore2.png',
+      'screenshots/bestbefore3.png',
     ]
   }
 ];
