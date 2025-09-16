@@ -1,0 +1,217 @@
+/* -------------------------- */
+/*       COLOR VARIABLES       */
+/* -------------------------- */
+:root {
+  /* Background & Text */
+  --color-bg: #252227;          /* dark main background */
+  --color-text: #F2E6B7;        /* main text color */
+
+  /* Navbar */
+  --color-nav-bg: #252227;      /* navbar background */
+  --color-nav-text: #92786F;    /* navbar inactive links */
+  --color-nav-active: #F2E6B7;  /* navbar active link */
+
+  /* Buttons & Accent */
+  --color-accent: #E48145;       /* buttons / main accent */
+  --color-accent-hover: #92786F; /* hover effect */
+
+  /* Cards */
+  --color-card-bg: #624E54;         /* card background */
+  --color-card-shadow: rgba(0, 0, 0, 0.2); /* card shadow */
+
+  /* Tags */
+  --color-tag-bg: #92786F;           /* tag background */
+  --color-tag-text: #F2E6B7;         /* tag text */
+  --color-tag-active-bg: #E48145;    /* active tag background */
+  --color-tag-active-text: #252227;  /* active tag text */
+
+  /* Itch.io Link */
+  --color-itch-bg: #fa5c5c;
+  --color-itch-hover: #e54e4e;
+  --color-itch-text: #fff;
+}
+
+/* -------------------------- */
+/*       GLOBAL STYLES         */
+/* -------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.container {
+  width: 90%;          /* scale with viewport width */
+  max-width: 1920px;    /* don't get too wide on large screens */
+  margin: 0 auto;      /* center horizontally */
+  padding: 24px;       /* spacing inside */
+}
+
+/* -------------------------- */
+/*         NAVBAR             */
+/* -------------------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: var(--color-nav-bg);
+  color: var(--color-nav-text);
+}
+
+.nav-left {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.navbar a {
+  color: var(--color-nav-text);
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: var(--color-nav-active);
+}
+
+.navbar a.active {
+  color: var(--color-nav-active);
+  border-bottom: 2px solid var(--color-nav-active);
+}
+
+/* -------------------------- */
+/*         GRID / CARDS        */
+/* -------------------------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.card {
+  background: var(--color-card-bg);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px var(--color-card-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card .thumb img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card .meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+}
+
+button {
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background: var(--color-accent-hover);
+}
+
+/* -------------------------- */
+/*          TAGS              */
+/* -------------------------- */
+.tag {
+  background: var(--color-tag-bg);
+  color: var(--color-tag-text);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.8em;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.tag.active {
+  background: var(--color-tag-active-bg);
+  color: var(--color-tag-active-text);
+}
+
+/* -------------------------- */
+/*          SEARCH            */
+/* -------------------------- */
+.searchrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.search {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex: 1;
+}
+
+/* -------------------------- */
+/*       GAME PAGE / GALLERY  */
+/* -------------------------- */
+/* Game gallery horizontal scroll */
+.gallery {
+  display: flex;
+  overflow-x: auto;        /* enable horizontal scroll */
+  gap: 12px;
+  padding: 10px 0;
+  scrollbar-width: thin;   /* Firefox */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
+}
+
+.gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 4px;
+}
+
+.gallery img {
+  height: 540px;            /* fixed height */
+  width: auto;              /* scale width proportionally */
+  border-radius: 8px;
+  flex: 0 0 auto;           /* prevent flex shrinking/growing */
+  object-fit: cover;
+}
+
+/* -------------------------- */
+/*         ITCH.IO LINK       */
+/* -------------------------- */
+.itch {
+  display: inline-block;
+  margin-top: 15px;
+  background: var(--color-itch-bg);
+  color: var(--color-itch-text);
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.itch:hover {
+  background: var(--color-itch-hover);
+}
