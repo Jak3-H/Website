@@ -3,33 +3,43 @@
 /* -------------------------- */
 :root {
   /* Background & Text */
-  --color-bg: #252227;          /* dark main background */
-  --color-text: #F2E6B7;        /* main text color */
+  --color-bg: #0f0f1a;            /* dark main background */
+  --color-text: #c3ccdc;          /* main text color */
 
   /* Navbar */
-  --color-nav-bg: #252227;      /* navbar background */
-  --color-nav-text: #92786F;    /* navbar inactive links */
-  --color-nav-active: #F2E6B7;  /* navbar active link */
+  --color-nav-bg: #161625;        /* navbar background */
+  --color-nav-text: #7a88cf;      /* navbar inactive links */
+  --color-nav-active: #ffffff;    /* navbar active link */
 
   /* Buttons & Accent */
-  --color-accent: #E48145;       /* buttons / main accent */
-  --color-accent-hover: #92786F; /* hover effect */
+  --color-accent: #7e57c2;        /* buttons / main accent (purple) */
+  --color-accent-hover: #5c6bc0;  /* hover effect (indigo) */
 
   /* Cards */
-  --color-card-bg: #624E54;         /* card background */
-  --color-card-shadow: rgba(0, 0, 0, 0.2); /* card shadow */
+  --color-card-bg: #1e1e2e;           /* card background */
+  --color-card-shadow: rgba(0, 0, 0, 0.3); /* card shadow */
 
   /* Tags */
-  --color-tag-bg: #92786F;           /* tag background */
-  --color-tag-text: #F2E6B7;         /* tag text */
-  --color-tag-active-bg: #E48145;    /* active tag background */
-  --color-tag-active-text: #252227;  /* active tag text */
+  --color-tag-bg: #3949ab;           /* tag background (blue-purple) */
+  --color-tag-text: #e0e0e0;         /* tag text */
+  --color-tag-active-bg: #7e57c2;    /* active tag background */
+  --color-tag-active-text: #ffffff;  /* active tag text */
 
   /* Itch.io Link */
   --color-itch-bg: #fa5c5c;
   --color-itch-hover: #e54e4e;
   --color-itch-text: #fff;
+
+  /* Tags */
+  /* Text */
+  /* Subtext */
+  /* Link */
+
+  /* Buttons */
+  /* Primary */
+  /* Secondary */
 }
+
 
 /* -------------------------- */
 /*       GLOBAL STYLES         */
@@ -49,7 +59,56 @@ body {
   width: 90%;          /* scale with viewport width */
   max-width: 1920px;    /* don't get too wide on large screens */
   margin: 0 auto;      /* center horizontally */
-  padding: 24px;       /* spacing inside */
+  padding: 12px;       /* spacing inside */
+}
+
+/* -------------------------- */
+/*       SECTION STYLES         */
+/* -------------------------- */
+
+.section-hero {
+  position: relative;
+  height: 400px;
+}
+
+.section-1 {
+  background-color: #0f0f1a;
+}
+
+.section-2 {
+  background-color: #151525;
+}
+
+h1 {
+  font-size: 4rem;
+  color: var(--color-accent);  /* Use your red-magenta accent */
+  font-family: Consolas, "Courier New", monospace;
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
+  color: var(--color-accent);  /* Use your red-magenta accent */
+  font-family: Consolas, "Courier New", monospace;
+  font-weight: 700;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2rem;
+  color: var(--color-accent);  /* Use your red-magenta accent */
+  font-family: Consolas, "Courier New", monospace;
+  font-weight: 700;
+  text-align: center;
+}
+
+p {
+  font-size: 1.5rem;
+  color: var(--color--text);
+  font-family: Consolas, "Courier New", monospace;
+  font-weight: 350;
+  text-align: center;
 }
 
 /* -------------------------- */
@@ -130,6 +189,7 @@ button {
   border-radius: 6px;
   cursor: pointer;
 }
+
 button:hover {
   background: var(--color-accent-hover);
 }
